@@ -15,7 +15,7 @@ app.use(cors());
 
 app.use('/posts', postRoutes);
 
-const CONNECTION_URL = `mongodb+srv://lionel:${process.env.PASSWORD}@cluster0.asvxbia.mongodb.net/boncoin`;
+const CONNECTION_URL = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@${process.env.CLUSTER}/${process.env.DB}`;
 const PORT = process.env.PORT|| 5000;
 
 console.log("CONNECTION_URL", CONNECTION_URL);
